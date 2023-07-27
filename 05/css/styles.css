@@ -93,7 +93,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked + .fake_checkbox {
-  background-image: url(/05/img/Checklist.svg);
+  background-image: url(/05/img/favicon.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
