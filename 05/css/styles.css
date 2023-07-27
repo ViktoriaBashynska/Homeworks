@@ -107,6 +107,7 @@ input[type="checkbox"]:checked + .fake_checkbox {
   min-height: 45px;
 }
 .bon_appetit p {
+  
   text-align: center;
   color: #ff8984;
   font-size: 18px;
