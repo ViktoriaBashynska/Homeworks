@@ -1,0 +1,136 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(82, 82, 82);
+}
+.shop_list {
+  width: 793px;
+  height: 507px;
+  background-color: #3b3f45;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 5px solid #fff;
+}
+/* HEADER */
+header {
+  background: #4a4f56;
+  text-align: center;
+  padding-top: 19px;
+  padding-bottom: 12px;
+}
+h1 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.header_p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+header h1,
+p :not(:last-child) {
+  margin-bottom: 4px;
+}
+header h1,
+.header_p {
+  color: #ff8984;
+}
+
+/* MAIN */
+.list_wrapper {
+  width: 534px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.list p {
+  display: inline-block;
+}
+.list {
+  width: 534px;
+}
+
+.list li:nth-child(2n + 1) {
+  background-color: #88839e;
+}
+.list li:nth-child(2n) {
+  background-color: #7a7593;
+}
+
+.item_name {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  padding-top: 11px;
+  padding-bottom: 13px;
+}
+.extra {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 400;
+  position: relative;
+  top: -2.6px;
+  margin-left: 3px;
+  padding-top: 12px;
+  padding-bottom: 17px;
+}
+.extra::before {
+  content: "(";
+}
+.extra::after {
+  content: ")";
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+.fake_checkbox {
+  width: 19px;
+  height: 19px;
+  display: inline-block;
+  background-color: #fff;
+  vertical-align: middle;
+  margin-left: 12px;
+  margin-right: 16px;
+}
+
+input[type="checkbox"]:checked + .fake_checkbox {
+  background-image: url(/05/img/Checklist.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bon_appetit {
+  width: 534px;
+  background-color: #4a4f56;
+  margin: 0 auto;
+  margin-top: 45px;
+  min-height: 45px;
+}
+.bon_appetit p {
+  text-align: center;
+  color: #ff8984;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 12px 0;
+}
+
+/* ANIMATION */
+
+.list_item:nth-child(1n):hover {
+  background-color: #625e77;
+  border-bottom: 3px solid #fff;
+  border-top: 3px solid #fff;
+}
+
+.list_item:has(.inp:checked) > p {
+  color: #a0a0a0b6;
+  text-decoration: line-through;
+}
+.list_item:has(.inp:active) {
+  background-color: #ff8888cc;
+  transition: all 5sec ease-in-out;
+}
+
+.list_item:has(.inp:checked) + .list_item {
+  box-shadow: 0px 9px 3px -5px #00000039 inset;
+}

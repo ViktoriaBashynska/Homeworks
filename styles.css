@@ -1,0 +1,46 @@
+.html {
+  font-family: "Raleway", sans-serif;
+}
+.container {
+  width: 1000px;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+header {
+  background-color: #2e2e2e;
+  text-align: center;
+  border-bottom: 1px solid #000;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 500;
+  padding: 20px;
+  color: #fff;
+}
+
+.HM_list {
+  font-size: 24px;
+  font-weight: 500;
+  padding: 50px;
+
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.HM_item:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+.HM_item:hover p {
+  opacity: 1;
+  color: green;
+  font-weight: bolder;
+}
+
+img {
+  width: 300px;
+  margin: 0 auto;
+}
