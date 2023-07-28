@@ -158,3 +158,7 @@ input[type="checkbox"]:checked + label::after {
   width: 90%;
   opacity: 1;
 }
+
+.list_item:nth-child(4):has(.inp:checked) > p {
+  opacity: 0;
+}
