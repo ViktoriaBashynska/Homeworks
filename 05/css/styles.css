@@ -4,7 +4,7 @@ body {
 }
 .shop_list {
   width: 793px;
-  height: 507px;
+
   background-color: #3b3f45;
   margin: 0 auto;
   margin-top: 20px;
@@ -41,11 +41,13 @@ header h1,
   margin: 0 auto;
   margin-top: 20px;
 }
-.list p {
+.list .list_item p {
   display: inline-block;
 }
+
 .list {
   width: 534px;
+  margin-bottom: 45px;
 }
 
 .list li:nth-child(2n + 1) {
@@ -54,13 +56,15 @@ header h1,
 .list li:nth-child(2n) {
   background-color: #7a7593;
 }
+.list_item {
+  padding-top: 11px;
+  padding-bottom: 13px;
+}
 
 .item_name {
   color: #fff;
   font-size: 18px;
   font-weight: 400;
-  padding-top: 11px;
-  padding-bottom: 13px;
 }
 .extra {
   color: #fff;
@@ -69,8 +73,6 @@ header h1,
   position: relative;
   top: -2.6px;
   margin-left: 3px;
-  padding-top: 12px;
-  padding-bottom: 17px;
 }
 .extra::before {
   content: "(";
@@ -98,21 +100,24 @@ input[type="checkbox"]:checked + .fake_checkbox {
   background-size: cover;
   background-position: center;
 }
-
-.bon_appetit {
-  width: 534px;
+.button_wrapper {
   background-color: #4a4f56;
-  margin: 0 auto;
-  margin-top: 45px;
+  width: 534px;
   min-height: 45px;
-}
-.bon_appetit p {
-  
   text-align: center;
+  margin: 0 auto;
+  margin-bottom: 45px;
+}
+button {
+  width: 100%;
+  padding: 12px;
   color: #ff8984;
   font-size: 18px;
   font-weight: 400;
-  padding: 12px 0;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 /* ANIMATION */
@@ -121,6 +126,8 @@ input[type="checkbox"]:checked + .fake_checkbox {
   background-color: #625e77;
   border-bottom: 3px solid #fff;
   border-top: 3px solid #fff;
+  padding-top: 8px;
+  padding-bottom: 10px;
 }
 
 .list_item:has(.inp:checked) > p {
