@@ -14,6 +14,9 @@ section {
   padding: 66px 135px 119px;
   border: 25px solid #2b81ac;
 }
+button {
+  width: 100%;
+}
 
 li {
   background-color: #fff;
@@ -23,6 +26,8 @@ li {
   display: inline-block;
   box-sizing: border-box;
   padding: 27px;
+}
+button {
 }
 p:not(.fp, .lp) {
   color: #fff;
@@ -106,4 +111,16 @@ li:nth-child(10) {
 }
 li:nth-child(11) {
   background-color: #9494b8;
+}
+
+li:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.185) inset;
+}
+
+button:hover {
+  cursor: pointer;
+}
+ul {
+  box-shadow: 0px 0px 60px #4a4a4a;
 }
