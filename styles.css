@@ -33,14 +33,15 @@ header {
 .HM_item:not(:last-child) {
   margin-bottom: 60px;
 }
-
-.HM_item:hover p {
+.update {
+  color: green;
+}
+.HM_item:hover .update {
   opacity: 1;
   color: green;
   font-weight: bolder;
 }
-
-img {
-  width: 300px;
-  margin: 0 auto;
+.HM_item:hover .new {
+  color: yellow;
+  background-color: #000;
 }
