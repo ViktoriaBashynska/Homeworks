@@ -27,8 +27,7 @@ li {
   box-sizing: border-box;
   padding: 27px;
 }
-button {
-}
+
 p:not(.fp, .lp) {
   color: #fff;
   font-size: 22px;
