@@ -2,15 +2,17 @@ body,
 html {
   width: 100%;
   height: 100%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", sans-serif;
 }
 
 section {
   width: 1440px;
   font-size: 0;
-  padding: 50px;
-  background-color: #2b81ac;
-  padding: 129px 135px 179px;
-  margin: 50px;
+  background-color: #3399cc;
+  margin: 0 auto;
+  padding: 66px 135px 119px;
+  border: 25px solid #2b81ac;
 }
 
 li {
@@ -18,18 +20,50 @@ li {
   width: 1170px;
   height: 147px;
   outline: 4px solid #fff;
-  margin: 0;
   display: inline-block;
   box-sizing: border-box;
-}
-p {
-  text-align: center;
-  margin: 0 auto;
-  color: #fff;
-  font-size: 22px;
-  font-weight: 400;
   padding: 27px;
 }
+p:not(.fp, .lp) {
+  color: #fff;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 400;
+  position: relative;
+  display: block;
+  margin-bottom: 19px;
+}
+.fp,
+.lp {
+  color: #fff;
+  font-size: 21px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+.lp {
+  margin-top: 37px;
+}
+span {
+  color: #ffffffb3;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 400;
+  display: block;
+}
+
+.wi:not(.fp .wi) {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 42px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+.fp .wi {
+  color: #fff;
+  font-size: 27px;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
 .w-25 {
   width: 25%;
 }
@@ -41,38 +75,35 @@ p {
 }
 
 li:nth-child(1) {
-  background-color: rgb(51, 153, 204);
+  background-color: #6fb8db;
 }
 li:nth-child(2) {
-  background-color: #33cccc;
+  background-color: #70dcdb;
 }
 li:nth-child(3) {
-  background-color: #996699;
+  background-color: #b894b8;
 }
 li:nth-child(4) {
   background-color: #c24747;
 }
 li:nth-child(5) {
-  background-color: #e2674a;
+  background-color: #eb967f;
 }
 li:nth-child(6) {
-  background-color: #ffcc66;
+  background-color: #ffdb94;
 }
 li:nth-child(7) {
-  background-color: #99cc99;
+  background-color: #b8dcb8;
 }
 li:nth-child(8) {
-  background-color: #669999;
+  background-color: #94b8b8;
 }
 li:nth-child(9) {
-  background-color: #cc6699;
+  background-color: #db94b8;
 }
 li:nth-child(10) {
-  background-color: #339966;
+  background-color: #6fb894;
 }
 li:nth-child(11) {
-  background-color: #666699;
-}
-li:hover {
-  background-color: ;
+  background-color: #9494b8;
 }
