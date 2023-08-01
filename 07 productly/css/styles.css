@@ -17,7 +17,7 @@ header {
 
 .nav_wrapper {
   width: 83%;
-  /* max-width: 1200px; */
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,6 +75,7 @@ nav button {
 .FS_section {
   padding: 70px 120px 100px;
   width: 83%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -119,6 +120,7 @@ nav button {
   width: 50%;
 }
 /* ABOUT */
+
 .about_section {
   text-align: center;
   margin-bottom: 100px;
@@ -138,6 +140,7 @@ nav button {
 
 .about_container {
   width: 83%;
+  max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 75px;
 }
@@ -221,6 +224,7 @@ ul li:nth-child(4) > .icon_wrapper {
 }
 .gen_container {
   width: 83%;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -306,6 +310,7 @@ footer {
 }
 .footer_nav {
   width: 83%;
+  max-width: 1200px;
   display: flex;
   justify-content: space-between;
 }
