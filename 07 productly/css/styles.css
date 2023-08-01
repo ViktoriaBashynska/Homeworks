@@ -2,7 +2,10 @@ html,
 body {
   width: 100vw;
   font-family: "Montserrat", sans-serif;
-  height: 100vh;
+}
+@font-face {
+  font-family: "Gotham";
+  src: url(../fonts/Gotham-Bold.otf);
 }
 /* HEADER + NAV */
 header {
@@ -13,8 +16,8 @@ header {
 }
 
 .nav_wrapper {
-  width: 100%;
-  max-width: 1200px;
+  width: 83%;
+  /* max-width: 1200px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,7 +26,7 @@ header {
 .logo_wrapper {
   display: flex;
   justify-content: start;
-  width: 200px;
+  min-width: 200px;
   height: 32px;
 }
 .nav_list {
@@ -36,6 +39,9 @@ header {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+}
+.nav_item:nth-child(1) {
+  color: #ff9900;
 }
 .buttons_wrapper {
   display: flex;
@@ -68,7 +74,7 @@ nav button {
 /* FIRST SCREEN */
 .FS_section {
   padding: 70px 120px 100px;
-  max-width: 1200px;
+  width: 83%;
   margin: 0 auto;
 }
 
@@ -114,8 +120,12 @@ nav button {
 }
 /* ABOUT */
 .about_section {
-  padding: 100px 0;
   text-align: center;
+  margin-bottom: 100px;
+  background-image: url(../img/about-bg.svg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 .about_title {
   max-width: 540px;
@@ -126,21 +136,16 @@ nav button {
   margin: 0 auto;
 }
 
-.BG {
-  background-image: url(../img/about-bg.svg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
 .about_container {
-  max-width: 1200px;
+  width: 83%;
   margin: 0 auto;
+  padding-bottom: 75px;
 }
 
 .about_item_title {
   color: #2f281e;
   font-size: 22px;
   font-weight: 600;
-  margin-top: 30px;
 }
 .about_p {
   margin-top: 16px;
@@ -161,9 +166,32 @@ nav button {
 .about_item {
   max-width: 270px;
 }
-
+.icon_wrapper {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  background-color: #7752be;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+i {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  align-self: center;
+}
+ul li:nth-child(2) > .icon_wrapper {
+  background-color: #fab005;
+}
+ul li:nth-child(3) > .icon_wrapper {
+  background-color: #f03e3d;
+}
+ul li:nth-child(4) > .icon_wrapper {
+  background-color: #4dadf7;
+}
 .sign_up_btn {
-  margin-bottom: 78px;
   width: 180px;
   height: 50px;
   padding: 13px auto;
@@ -181,8 +209,8 @@ nav button {
 
 /* DESIGN */
 .gen_section {
-  padding: 100px 0;
   text-align: center;
+  margin-bottom: 100px;
 }
 .gen_section p {
   margin-top: 16px;
@@ -192,7 +220,7 @@ nav button {
   line-height: 26px;
 }
 .gen_container {
-  max-width: 1200px;
+  width: 83%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -232,16 +260,38 @@ nav button {
 .product_wrap {
   display: flex;
   flex-direction: row-reverse;
-  padding: 50px 0;
 }
 
 .product_left {
   max-width: 505px;
 }
+.check_icon {
+  min-width: 35px;
+  min-height: 35px;
+  background-color: #ff9900;
+  border-radius: 10px;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+.check_icon i {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 10px;
+}
+
+.product_left ul > li {
+  display: flex;
+  gap: 30px;
+}
+.product_left ul > li > p {
+  width: 440px;
+}
+
 /* MARKET */
 .market_wrap {
   display: flex;
-  padding: 40px 0;
 }
 
 .market_left {
@@ -255,14 +305,22 @@ footer {
   justify-content: center;
 }
 .footer_nav {
-  width: 100%;
-  max-width: 1200px;
+  width: 83%;
   display: flex;
   justify-content: space-between;
 }
 .QL_item,
 .stuff_item {
   max-width: 135px;
+}
+.footer_QL,
+.footer_stuff,
+.last_item_title {
+  font-family: "Gotham";
+  color: #2f281e;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
 }
 .footer_QL,
 .footer_stuff {
@@ -277,6 +335,12 @@ footer {
   flex-direction: column;
   gap: 15px;
   flex-wrap: wrap;
+  color: #544837;
+  font-family: "Montserrat";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
 }
 .last_list {
   max-width: 340px;

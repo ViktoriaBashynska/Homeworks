@@ -151,7 +151,7 @@ label::after {
   position: absolute;
   top: 50%;
   left: 45px;
-  right: px;
+
   opacity: 0;
 }
 input[type="checkbox"]:checked + label::after {

@@ -36,12 +36,9 @@ header {
 .update {
   color: green;
 }
-.HM_item:hover .update {
+
+.HM_item:hover .new {
   opacity: 1;
   color: green;
   font-weight: bolder;
-}
-.HM_item:hover .new {
-  color: yellow;
-  background-color: #000;
 }
