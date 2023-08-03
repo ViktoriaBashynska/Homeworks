@@ -116,6 +116,11 @@ i {
 .architec_img div {
   position: relative;
 }
+.architec_img div:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
+
 .architec_img div::before {
   content: "";
   display: block;
@@ -191,7 +196,10 @@ i {
 .life_img div {
   position: relative;
 }
-
+.life_img div:hover {
+  transform: scale(1.2);
+  z-index: 1;
+}
 .life_img div::before {
   content: "";
   display: block;
@@ -242,6 +250,7 @@ i {
   grid-column: 1 / 3;
   grid-row: 2 / 3;
 }
+
 .life_item4 {
   grid-column: 3/4;
   grid-row: 2 / span 2fr;
@@ -270,6 +279,10 @@ i {
 }
 .portrait_img div:hover .icon {
   opacity: 1;
+}
+.portrait_img div:hover {
+  transform: scale(1.2);
+  z-index: 1;
 }
 .portrait_img div::before {
   content: "";
