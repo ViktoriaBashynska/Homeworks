@@ -119,6 +119,7 @@ i {
 .architec_img div:hover {
   transform: scale(1.2);
   z-index: 1;
+  transition: all 0.1s ease-in-out;
 }
 
 .architec_img div::before {
@@ -198,6 +199,7 @@ i {
 }
 .life_img div:hover {
   transform: scale(1.2);
+  transition: all 0.1s ease-in-out;
   z-index: 1;
 }
 .life_img div::before {
@@ -283,6 +285,7 @@ i {
 .portrait_img div:hover {
   transform: scale(1.2);
   z-index: 1;
+  transition: all 0.1s ease-in-out;
 }
 .portrait_img div::before {
   content: "";
