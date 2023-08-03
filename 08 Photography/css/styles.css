@@ -12,6 +12,63 @@ img {
   height: 100%;
   width: 100%;
 }
+.save {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(224, 224, 224, 0.5);
+  position: absolute;
+  text-align: center;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  right: 20px;
+  top: 20px;
+  opacity: 0;
+}
+.fa-download {
+  font-size: 30px;
+  opacity: 0.5;
+}
+.save:hover {
+  background: rgba(224, 224, 224);
+  cursor: pointer;
+}
+.save:hover .fa-download {
+  opacity: 1;
+  transform: scale(1.2);
+  color: #000;
+}
+.icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(224, 224, 224, 0.5);
+  position: absolute;
+  text-align: center;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  left: 20px;
+  top: 20px;
+  opacity: 0;
+}
+i {
+  font-size: 30px;
+  opacity: 0.5;
+}
+
+.icon:hover {
+  background: rgba(224, 224, 224);
+  cursor: pointer;
+}
+.icon:hover i {
+  opacity: 1;
+  transform: scale(1.2);
+  color: #ff00008a;
+}
 
 .author {
   width: 100%;
@@ -78,6 +135,12 @@ img {
       rgba(187, 186, 192, 0.26) 62.5%
     )
   );
+}
+.architec_img div:hover .icon {
+  opacity: 1;
+}
+.architec_img div:hover .save {
+  opacity: 1;
 }
 .architec_img div:hover::before {
   display: block;
@@ -148,6 +211,9 @@ img {
     )
   );
 }
+.life_img div:hover .icon {
+  opacity: 1;
+}
 .life_img div:hover::before {
   display: block;
   border-radius: 20px;
@@ -160,6 +226,9 @@ img {
       rgba(187, 186, 192, 0) 12.29%
     )
   );
+}
+.life_img div:hover .save {
+  opacity: 1;
 }
 
 .life_item1 {
@@ -199,6 +268,9 @@ img {
 .portrait_img div {
   position: relative;
 }
+.portrait_img div:hover .icon {
+  opacity: 1;
+}
 .portrait_img div::before {
   content: "";
   display: block;
@@ -230,6 +302,9 @@ img {
       rgba(187, 186, 192, 0) 12.29%
     )
   );
+}
+.portrait_img div:hover .save {
+  opacity: 1;
 }
 
 .portrait_item1 {
