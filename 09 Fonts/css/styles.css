@@ -68,11 +68,13 @@ h2 {
 .sup {
   color: #000;
   font-family: Farro;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 300;
   letter-spacing: 1.2px;
   text-transform: none;
-  vertical-align: super;
+  position: relative;
+  top: -10px;
+  font-style: ;
 }
 
 p {
@@ -85,4 +87,16 @@ p {
 }
 p:last-of-type {
   margin-bottom: 0;
+}
+.underline {
+  text-decoration: underline;
+}
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: 700;
+}
+.color {
+  background-color: rgb(214, 214, 214);
 }
