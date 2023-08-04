@@ -1,0 +1,88 @@
+html {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header {
+  width: 100%;
+  display: flex;
+  padding: 13px 0;
+  justify-content: space-between;
+}
+.nav {
+  display: flex;
+  gap: 50px;
+  align-content: center;
+}
+.eng {
+  color: #000000;
+  font-family: Tourney;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 1.32px;
+  text-transform: uppercase;
+  display: flex;
+  align-self: center;
+}
+.nav_list {
+  display: flex;
+  gap: 10px;
+}
+.nav_item {
+  display: flex;
+  align-content: center;
+  color: #000;
+  font-family: Staatliches;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.66px;
+  display: flex;
+  align-self: center;
+}
+.logo {
+  width: 238px;
+  height: 54px;
+}
+section {
+  max-width: 1200px;
+  margin-bottom: 70px;
+}
+.intro {
+  padding-top: 70px;
+}
+.input {
+  padding-bottom: 90px;
+}
+h2 {
+  color: #000;
+  font-family: Francois One;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.sup {
+  color: #000;
+  font-family: Farro;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  text-transform: none;
+  vertical-align: super;
+}
+
+p {
+  color: #000;
+  font-family: PT Sans;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 48px;
+  margin-bottom: 40px;
+}
+p:last-of-type {
+  margin-bottom: 0;
+}
