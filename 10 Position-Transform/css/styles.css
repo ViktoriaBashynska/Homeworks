@@ -1,0 +1,151 @@
+html {
+  margin: 0 auto;
+}
+
+main {
+  background-image: url(../img/bg-picture.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position-x: right;
+  background-position-y: 150px;
+  padding-top: 140px;
+  padding-bottom: 90px;
+}
+
+.all_wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+}
+.header_wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  padding: 13px 0;
+  justify-content: space-between;
+}
+.nav {
+  display: flex;
+  gap: 50px;
+  align-content: center;
+}
+.eng {
+  color: #000000;
+  font-family: Tourney;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 1.32px;
+  text-transform: uppercase;
+  display: flex;
+  align-self: center;
+}
+.nav_list {
+  display: flex;
+  gap: 10px;
+}
+.nav_item {
+  display: flex;
+  align-content: center;
+  color: #000;
+  font-family: Staatliches;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.66px;
+  display: flex;
+  align-self: center;
+}
+.logo {
+  width: 238px;
+  height: 54px;
+}
+.aside_nav {
+  width: 365px;
+  height: 440px;
+  padding: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 140px;
+}
+.aside_nav_list {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.aside_nav_item {
+  display: flex;
+  padding-bottom: 0px;
+  align-items: flex-start;
+  gap: 10px;
+  color: #000;
+  font-family: Francois One;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--gray-4, #bdbdbd);
+}
+
+section {
+  max-width: 785px;
+  margin-bottom: 70px;
+}
+.divider {
+  width: 100px;
+  height: 8px;
+  background: #000;
+  margin-bottom: 20px;
+}
+h2 {
+  color: #000;
+  font-family: Francois One;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.sup {
+  color: #000;
+  font-family: Farro;
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: 1.2px;
+  text-transform: capitalize;
+}
+
+p {
+  color: #000;
+  font-family: PT Sans;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 48px;
+  margin-bottom: 40px;
+}
+p:last-of-type {
+  margin-bottom: 0;
+}
+.underline {
+  text-decoration: underline;
+}
+.italic {
+  font-style: italic;
+}
+.bold {
+  font-weight: 700;
+}
+.color {
+  background-color: rgb(214, 214, 214);
+}
