@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Стилізація форм CSS</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form_wrapper">
+        <form
+          action="https://jkorpela.fi/cgi-bin/echo.cgi"
+          method="get"
+          target="_blank"
+          enctype="multipart/form-data"
+          class="left_form"
+        >
+          <h2 class="form_title">Create an Account</h2>
+          <div class="form_content">
+            <!-- 1 line -->
+            <div class="first_line">
+              <div class="first_name">
+                <label class="fn_lb" for="">First Name</label>
+                <input class="fn_inp" type="text" />
+              </div>
+              <div class="last_name">
+                <label class="ln_lb" for="">Last Name</label>
+                <input class="ln_inp" type="text" />
+              </div>
+            </div>
+            <!-- 2 line -->
+            <div class="sec_line">
+              <label class="lb_email" for="">E-mail</label>
+              <input class="inp_email" type="email" />
+              <p class="bot_text_email">
+                We'll never share your email with anyone else.
+              </p>
+            </div>
+            <!-- 3 line -->
+            <div class="third_rad_btn_line">
+              <div class="radio_male">
+                <input type="radio" name="gender" />
+                <label class="radio_lb" for="">Male</label>
+              </div>
+
+              <div class="radio_female">
+                <input type="radio" name="gender" />
+                <label class="radio_lb" for="">Female</label>
+              </div>
+            </div>
+            <!-- 4 line -->
+            <div class="line_four">
+              <div class="select">
+                <label class="select_lb" for="">Country</label>
+                <select class="select_inp">
+                  <option value="">Select</option>
+                  <option value="">Ukraine</option>
+                  <option value="">Sweden</option>
+                  <option value="">Germany</option>
+                  <option value="">Canada</option>
+                </select>
+              </div>
+              <div class="city">
+                <label class="city_lb" for="">City</label>
+                <input class="city_inp" type="text" />
+              </div>
+            </div>
+            <!-- Button -->
+            <button class="signUP_btn" type="submit">Sign Up</button>
+            <!-- Terms -->
+            <p class="terms">
+              By clicking the 'Sign Up' button, you confirm that you accept our
+              <br />
+              <span class="blue_text">Terms of Use</span> and
+              <span class="blue_text">Privacy Policy</span>
+            </p>
+            <div class="line"></div>
+            <!-- Acc -->
+            <div class="acc">
+              <p class="acc_p">Have an account?</p>
+              <a class="logIn" href="#">Log In</a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="form_wrapper">
+        <form
+          action="https://jkorpela.fi/cgi-bin/echo.cgi"
+          method="get"
+          target="_blank"
+          enctype="multipart/form-data"
+          class="right_form"
+        >
+          <h2 class="form_title">Profile</h2>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
