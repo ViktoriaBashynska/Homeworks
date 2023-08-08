@@ -5,16 +5,14 @@ main {
   background-image: url(../img/bg-picture.svg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 84% 78%;
-  background-position-x: 245%;
+  background-size: 52% 77.5%;
+  background-position-x: 812px;
   background-position-y: 150px;
 }
 .all_wrapper {
   padding-top: 140px;
   padding-bottom: 90px;
-}
 
-.all_wrapper {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
