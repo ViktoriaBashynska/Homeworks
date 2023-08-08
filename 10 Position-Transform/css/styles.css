@@ -1,14 +1,15 @@
 html {
   margin: 0 auto;
 }
-
 main {
   background-image: url(../img/bg-picture.svg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 760px 760px;
-  background-position-x: right;
+  background-size: 84% 78%;
+  background-position-x: 245%;
   background-position-y: 150px;
+}
+.all_wrapper {
   padding-top: 140px;
   padding-bottom: 90px;
 }
@@ -32,11 +33,13 @@ header {
   display: flex;
   padding: 13px 0;
   justify-content: space-between;
+  flex-wrap: wrap-reverse;
 }
 .nav {
   display: flex;
   gap: 50px;
   align-content: center;
+  flex-wrap: wrap;
 }
 .eng {
   color: #000000;
@@ -52,6 +55,7 @@ header {
 .nav_list {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 .nav_item {
   display: flex;

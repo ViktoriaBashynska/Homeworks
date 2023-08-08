@@ -14,11 +14,13 @@ header {
   display: flex;
   padding: 13px 0;
   justify-content: space-between;
+  flex-wrap: wrap-reverse;
 }
 .nav {
   display: flex;
   gap: 50px;
   align-content: center;
+  flex-wrap: wrap;
 }
 .eng {
   color: #000000;
@@ -91,6 +93,8 @@ main {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .card_wrapper {
   width: 270px;
