@@ -5,6 +5,24 @@
   background-color: #f7f7f7;
   padding: 55px 135px;
 }
+input {
+  cursor: text;
+}
+button,
+select,
+a {
+  cursor: pointer;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-color: transparent;
+}
+input:focus,
+select:focus {
+  border-color: #007bff;
+}
+
 .form_wrapper {
   width: 570px;
   background-color: #fff;
@@ -12,8 +30,7 @@
   padding-bottom: 16px;
 }
 /* Forms */
-.left_form,
-.right_form {
+.form {
   width: 500px;
   margin: 0 auto;
 }
@@ -32,22 +49,17 @@
   flex-direction: column;
   gap: 20px;
 }
-
-/* 1 Line */
-.first_line {
-  width: 100%;
+/* General styles */
+.cont_block {
   display: flex;
   gap: 10px;
 }
-.first_name,
-.last_name {
+.item {
   display: flex;
   flex-direction: column;
   gap: 7px;
 }
-.fn_lb,
-.ln_lb {
-  text-transform: capitalize;
+.lb {
   color: #545454;
   font-family: Roboto;
   font-size: 15px;
@@ -55,15 +67,13 @@
   line-height: 22px;
   letter-spacing: -0.2px;
 }
-.fn_inp,
-.ln_inp {
-  display: flex;
-  width: 245px;
-  height: 38px;
-  justify-content: center;
-  align-items: center;
+.inp {
+  min-width: 245px;
+  min-height: 38px;
   border: 1px solid #e4e4e4;
   border-radius: 6px;
+  padding: 7px 10px;
+  box-sizing: border-box;
   color: #545454;
   font-family: Inter;
   font-size: 15px;
@@ -71,37 +81,45 @@
   line-height: 22px;
   letter-spacing: -0.2px;
 }
-
-/* 2 Line */
-.sec_line {
-  width: 500px;
+.select_inp {
+  color: #969696;
+  border: transparent;
+  width: 100%;
+}
+.sel_lb {
+  padding: 0;
+  position: relative;
   display: flex;
-  justify-content: start;
-  gap: 7px;
+}
+
+/* arrows */
+.arrows {
+  position: absolute;
+  display: flex;
+  width: 18px;
+  height: 18px;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: absolute;
+  right: 10px;
+  align-self: center;
+}
+.arrows i {
+  width: 10px;
+  height: 5px;
+  color: #969696;
+}
+
+/* Email left side */
+.email {
+  display: flex;
   flex-direction: column;
 }
-.lb_email {
-  color: #545454;
-  font-family: "Roboto";
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: -0.2px;
-}
+
 .inp_email {
   display: flex;
   width: 500px;
   height: 38px;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #e4e4e4;
-  border-radius: 6px;
-  color: #545454;
-  font-family: Inter;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: -0.2px;
 }
 
 .bot_text_email {
@@ -112,8 +130,8 @@
   line-height: 18px;
   letter-spacing: -0.1px;
 }
-/* 3 Line */
-.third_rad_btn_line {
+/* Radio Buttons */
+.radio_btns {
   display: flex;
   gap: 21px;
 }
@@ -134,44 +152,7 @@
   letter-spacing: -0.2px;
 }
 
-/* 4 Line */
-.line_four {
-  display: flex;
-  gap: 10px;
-}
-.select,
-.city {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-.select_lb,
-.city_lb {
-  text-transform: capitalize;
-  color: #545454;
-  font-family: Roboto;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: -0.2px;
-}
-.city_inp,
-.select_inp {
-  width: 245px;
-  height: 38px;
-  border: 1px solid #e4e4e4;
-  border-radius: 6px;
-  color: #545454;
-  font-family: Inter;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: -0.2px;
-}
-.select_inp {
-  color: #969696;
-}
-/* Button sign up */
+/* Buttons */
 .signUP_btn {
   width: 500px;
   height: 38px;
@@ -186,6 +167,21 @@
   border-radius: 6px;
   text-transform: capitalize;
 }
+.upd_btn {
+  width: 150px;
+  height: 38px;
+  color: #fff;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.1px;
+  background-color: #007bff;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+
 /* Terms */
 .terms {
   width: 410px;
@@ -200,7 +196,7 @@
   margin: 0 auto;
 }
 
-.blue_text {
+.terms_link {
   color: #007bff;
 }
 .line {
@@ -209,7 +205,7 @@
   margin: 0 auto;
   background-color: #e4e4e4;
 }
-/* Acc */
+/* Have an account? */
 .acc {
   display: flex;
   justify-content: center;
@@ -230,4 +226,74 @@
   font-weight: 500;
   line-height: 22px;
   letter-spacing: -0.1px;
+}
+/* Profile Form */
+.ph__file_btn {
+  display: flex;
+  justify-content: flex-start;
+}
+.hero_img img {
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  margin-right: 20px;
+}
+.file_cont {
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: center;
+}
+input[type="file"] {
+  display: none;
+}
+.file_lb {
+  display: flex;
+  width: 138px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e4e4e4;
+  border-radius: 6px;
+  color: #545454;
+  cursor: pointer;
+  position: relative;
+}
+.fa-camera {
+  position: absolute;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  color: #969696;
+}
+.fa-camera:hover,
+.fa-trash:hover {
+  color: #545454;
+}
+
+.file_descr {
+  color: #969696;
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+}
+
+.delete_btn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  border: 1px solid #e4e4e4;
+  border-radius: 6px;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  top: -15px;
+}
+.fa-trash {
+  width: 16px;
+  height: 16px;
+  color: #969696;
 }
