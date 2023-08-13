@@ -39,17 +39,35 @@
             <div class="cont_block">
               <div class="item">
                 <label class="lb" for="">First Name</label>
-                <input class="inp" type="text" />
+                <input
+                  class="inp"
+                  type="text"
+                  name="name"
+                  placeholder="Mark"
+                  required
+                />
               </div>
               <div class="item">
                 <label class="lb" for="">Last Name</label>
-                <input class="inp" type="text" />
+                <input
+                  class="inp"
+                  type="text"
+                  name="last-name"
+                  placeholder="Davidson"
+                  required
+                />
               </div>
             </div>
             <!-- Email Long -->
             <div class="cont_block email">
               <label class="lb" for="">E-mail</label>
-              <input class="inp_email inp" type="email" />
+              <input
+                class="inp_email inp"
+                type="email"
+                name="e-mail"
+                placeholder="your@email.com"
+                required
+              />
               <p class="bot_text_email">
                 We'll never share your email with anyone else.
               </p>
@@ -57,13 +75,29 @@
             <!-- Radio Buttons -->
             <div class="radio_btns">
               <div class="radio_male">
-                <input type="radio" name="gender" />
-                <label class="radio_lb" for="">Male</label>
+                <label for="radio_male" class="fake_radio">
+                  <input
+                    id="radio_male"
+                    type="radio"
+                    name="gender"
+                    value="Male"
+                    required="required"
+                  />
+                </label>
+                <label class="radio_lb" for="radio_male">Male</label>
               </div>
 
               <div class="radio_female">
-                <input type="radio" name="gender" />
-                <label class="radio_lb" for="">Female</label>
+                <label for="radio_female" class="fake_radio">
+                  <input
+                    id="radio_female"
+                    type="radio"
+                    name="gender"
+                    value="Female"
+                    required="required"
+                  />
+                </label>
+                <label class="radio_lb" for="radio_female">Female</label>
               </div>
             </div>
             <!-- Country & City -->
@@ -76,18 +110,29 @@
                     <i class="fa-solid fa-sort-up"></i>
                     <i class="fa-solid fa-sort-down"></i>
                   </div>
-                  <select id="select_l" class="select_inp inp">
+                  <select
+                    id="select_l"
+                    class="select_inp inp"
+                    name="country"
+                    required="required"
+                  >
                     <option value="">Select</option>
-                    <option value="">Ukraine</option>
-                    <option value="">Sweden</option>
-                    <option value="">Germany</option>
-                    <option value="">Canada</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Canada">Canada</option>
                   </select>
                 </label>
               </div>
               <div class="item">
                 <label class="lb" for="">City</label>
-                <input class="inp" type="text" />
+                <input
+                  class="inp"
+                  type="text"
+                  name="city"
+                  placeholder="Kyiv,Göteborg"
+                  required
+                />
               </div>
             </div>
             <!-- Button Sign UP -->
@@ -121,9 +166,17 @@
           <div class="form_content">
             <!-- Image & Upload File & Delete Button -->
             <div class="ph__file_btn">
-              <div class="hero_img"><img src="./img/hero.png" alt="" /></div>
+              <div class="hero_img">
+                <label for="file"><img src="./img/hero.png" alt="" /></label>
+                <span class="choose_img">Choose Image</span>
+              </div>
               <div class="file_cont">
-                <input id="file" type="file" />
+                <input
+                  id="file"
+                  type="file"
+                  name="avatar"
+                  accept="Image/png,Image/jpeg"
+                />
                 <label class="file_lb" for="file"
                   ><i class="fa-solid fa-camera"></i
                 ></label>
@@ -137,11 +190,23 @@
             <div class="cont_block">
               <div class="item">
                 <label class="lb" for="">Name</label>
-                <input class="inp" type="text" />
+                <input
+                  class="inp"
+                  type="text"
+                  name="name"
+                  placeholder="Mark Davidson"
+                  required
+                />
               </div>
               <div class="item">
                 <label class="lb" for="">E-mail</label>
-                <input class="inp" type="email" />
+                <input
+                  class="inp"
+                  type="email"
+                  name="e-mail"
+                  placeholder="your@email.com"
+                  required
+                />
               </div>
             </div>
             <!-- Country & City Profile Form -->
@@ -154,34 +219,59 @@
                     <i class="fa-solid fa-sort-up"></i>
                     <i class="fa-solid fa-sort-down"></i>
                   </div>
-                  <select id="select_r" class="select_inp inp">
+                  <select
+                    name="country"
+                    id="select_r"
+                    class="select_inp inp"
+                    required="required"
+                  >
                     <option value="">Select</option>
-                    <option value="">Ukraine</option>
-                    <option value="">Sweden</option>
-                    <option value="">Germany</option>
-                    <option value="">Canada</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Canada">Canada</option>
                   </select>
                 </label>
               </div>
               <div class="item">
                 <label class="lb" for="">City</label>
-                <input class="inp" type="text" />
+                <input
+                  class="inp"
+                  type="text"
+                  name="city"
+                  placeholder="Kyiv,Göteborg"
+                  required
+                />
               </div>
             </div>
             <!-- Zio Code & Phone Number -->
             <div class="cont_block">
               <div class="item">
                 <label class="lb" for="">Zip Code</label>
-                <input class="inp" type="number" />
+                <input
+                  class="inp"
+                  type="text"
+                  name="zip-code"
+                  maxlength="10"
+                  placeholder="42531-4321"
+                  required
+                />
               </div>
               <div class="item">
                 <label class="lb" for="">Phone Number</label>
-                <input class="inp" type="number" />
+                <input
+                  class="inp"
+                  type="tel"
+                  name="mobile-number"
+                  maxlength="15"
+                  placeholder="+38(067)4973175"
+                  required
+                />
               </div>
             </div>
             <!-- Button Update -->
             <div class="update_btn">
-              <button class="upd_btn" type="button">Update</button>
+              <button class="upd_btn" type="submit">Update</button>
             </div>
           </div>
         </form>
