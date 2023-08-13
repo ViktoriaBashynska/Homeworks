@@ -1,0 +1,166 @@
+@import url(./reset.css);
+body {
+  accent-color: #FFCC00;
+  height: 100wh;
+}
+
+.wrapper {
+  max-width: 1440px;
+  padding: 122px 135px;
+  background: #FFF;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.title_wrapper {
+  min-width: 450px;
+  height: 155px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-image: linear-gradient(to right, #FC0 210px, transparent 210px 240px, #FC0 240px);
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: bottom;
+}
+.title_wrapper .subtitle {
+  color: #898F8F;
+  font-family: Raleway;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+.title_wrapper .title {
+  color: #FC0;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 66px;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 1170px;
+  display: flex;
+  margin: 0 auto;
+  gap: 170px;
+  background-image: linear-gradient(to right, #FC0 210px, transparent 210px 240px, #FC0 240px);
+  background-repeat: no-repeat;
+  background-size: 1px 100%;
+  background-position: bottom;
+}
+.container .content, .container .hero {
+  max-width: 430px;
+  max-height: 430px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.content {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.hero {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 15px;
+  background: linear-gradient(to right, #FC0 100px, transparent 100px 330px, #FC0 330px 430px), linear-gradient(to right, #FC0 100px, transparent 100px 330px, #FC0 330px 430px), linear-gradient(to top, #FC0 100px, transparent 100px 330px, #FC0 330px 430px), linear-gradient(to top, #FC0 100px, transparent 100px 330px, #FC0 330px 430px);
+  background-repeat: no-repeat;
+  background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%;
+  background-position: bottom, top, left, right;
+}
+
+.hero_image {
+  border: 1px solid #FC0;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.about_hero {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 30px;
+  background-image: linear-gradient(to right, transparent 165px, #FC0 165px 265px, transparent 265px 430px);
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: center;
+}
+.about_hero .hero_name {
+  color: #666;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: capitalize;
+}
+.about_hero .profession {
+  color: #666;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  text-transform: capitalize;
+}
+
+.social_list {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.description {
+  padding-bottom: 20px;
+  color: #333;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  background-image: linear-gradient(to right, transparent 190px, #FC0 190px 200px, transparent 200px 205px, #FC0 205px 225px, transparent 225px 230px, #FC0 230px 240px, transparent 240px);
+  background-repeat: no-repeat;
+  background-size: 100% 5px;
+  background-position: bottom;
+}
+
+.view_prof_btn button {
+  color: #666;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+  text-transform: uppercase;
+  border: 1px solid #FC0;
+  padding: 5px 10px;
+  margin-top: 25px;
+}
+
+.social_item {
+  min-width: 30px;
+  min-height: 30px;
+  border: 2px solid #CCCCCC;
+  border-radius: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-brands {
+  width: 15px;
+  margin: 0 auto;
+  color: #CCCCCC;
+}
