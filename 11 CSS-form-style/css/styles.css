@@ -158,6 +158,7 @@ option:first-of-type {
   gap: 8px;
 }
 .radio_lb {
+  cursor: pointer;
   color: #545454;
   font-family: Roboto;
   font-size: 15px;
