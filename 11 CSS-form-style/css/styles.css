@@ -5,6 +5,7 @@
   gap: 30px;
   background-color: #f7f7f7;
   padding: 55px 135px;
+  margin: 0 auto;
 }
 /* General adjastments */
 input {
@@ -35,6 +36,7 @@ input::placeholder {
   background-color: #fff;
   padding-top: 35px;
   padding-bottom: 16px;
+  border-radius: 6px;
 }
 /* Forms */
 .form {
