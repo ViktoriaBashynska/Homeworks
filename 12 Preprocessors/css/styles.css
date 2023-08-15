@@ -1,42 +1,41 @@
 @import url(./reset.css);
 body {
-  accent-color: #FFCC00;
-  height: 100wh;
+  height: 100vh;
 }
 
-.wrapper {
+.all_wrapper {
+  width: 1440px;
   max-width: 1440px;
   padding: 122px 135px;
-  background: #FFF;
+  background: #fff;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+}
+
+.container {
+  width: 1170px;
+  max-width: 1170px;
+  background: #fff;
+  margin: 0 auto;
 }
 
 .title_wrapper {
-  min-width: 450px;
-  height: 155px;
-  margin: 0 auto;
+  width: 100%;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  background-image: linear-gradient(to right, #FC0 210px, transparent 210px 240px, #FC0 240px);
-  background-repeat: no-repeat;
-  background-size: 100% 1px;
-  background-position: bottom;
+  margin-bottom: 40px;
 }
-.title_wrapper .subtitle {
-  color: #898F8F;
+
+.subtitle {
+  color: #898f8f;
   font-family: Raleway;
   font-size: 18px;
   font-weight: 500;
   line-height: 24px;
   text-transform: uppercase;
+  margin-bottom: 15px;
 }
-.title_wrapper .title {
-  color: #FC0;
+
+.title {
+  color: #fc0;
   text-align: center;
   font-family: Roboto;
   font-size: 60px;
@@ -44,66 +43,91 @@ body {
   font-weight: 900;
   line-height: 66px;
   text-transform: uppercase;
+  margin-bottom: 40px;
 }
 
-.container {
-  max-width: 1170px;
-  display: flex;
+.bonfire_img {
+  width: 20px;
+  height: 20px;
   margin: 0 auto;
-  gap: 170px;
-  background-image: linear-gradient(to right, #FC0 210px, transparent 210px 240px, #FC0 240px);
+  position: relative;
+  display: flex;
+}
+.bonfire_img::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #fc0;
+  height: 1px;
+  width: 210px;
+  right: 25px;
+  display: flex;
+  align-self: center;
+}
+.bonfire_img::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: #fc0;
+  height: 1px;
+  width: 210px;
+  left: 25px;
+  display: flex;
+  align-self: center;
+}
+
+.content_wrapper {
+  width: 1030px;
+  max-width: 1030px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  background-image: linear-gradient(to top, #fc0 100%, transparent 0%);
   background-repeat: no-repeat;
   background-size: 1px 100%;
-  background-position: bottom;
-}
-.container .content, .container .hero {
-  max-width: 430px;
-  max-height: 430px;
-  text-align: center;
-  box-sizing: border-box;
-}
-
-.content {
-  margin-top: 70px;
-  margin-bottom: 70px;
+  background-position: center;
 }
 
 .hero {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  padding: 65px 0px;
+}
+.hero .hero_image {
+  width: 430px;
   padding: 15px;
-  background: linear-gradient(to right, #FC0 100px, transparent 100px 330px, #FC0 330px 430px), linear-gradient(to right, #FC0 100px, transparent 100px 330px, #FC0 330px 430px), linear-gradient(to top, #FC0 100px, transparent 100px 330px, #FC0 330px 430px), linear-gradient(to top, #FC0 100px, transparent 100px 330px, #FC0 330px 430px);
+  position: relative;
+  background: linear-gradient(to right, #fc0 100px, transparent 100px 330px, #fc0 330px 430px), linear-gradient(to right, #fc0 100px, transparent 100px 330px, #fc0 330px 430px), linear-gradient(to top, #fc0 100px, transparent 100px 330px, #fc0 330px 430px), linear-gradient(to top, #fc0 100px, transparent 100px 330px, #fc0 330px 430px);
   background-repeat: no-repeat;
   background-size: 100% 1px, 100% 1px, 1px 100%, 1px 100%;
   background-position: bottom, top, left, right;
 }
-
-.hero_image {
-  border: 1px solid #FC0;
-  width: 400px;
-  height: 400px;
-  margin: 0 auto;
+.hero .hero_image img {
+  border: 1px solid #fc0;
 }
 
-.about_hero {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
+.about {
+  padding: 70px 0;
+  width: 430px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.about_titles {
   margin-bottom: 30px;
-  background-image: linear-gradient(to right, transparent 165px, #FC0 165px 265px, transparent 265px 430px);
+  background-image: linear-gradient(to right, transparent 165px, #fc0 165px 265px, transparent 265px 430px);
   background-repeat: no-repeat;
   background-size: 100% 1px;
   background-position: center;
 }
-.about_hero .hero_name {
+.about_titles .hero_name {
   color: #666;
   text-align: center;
   font-family: Roboto;
   font-size: 36px;
   font-weight: 900;
   text-transform: capitalize;
+  margin-bottom: 60px;
 }
-.about_hero .profession {
+.about_titles .profession {
   color: #666;
   text-align: center;
   font-family: Raleway;
@@ -119,22 +143,43 @@ body {
   justify-content: center;
   gap: 5px;
 }
+.social_list .social_item {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #cccccc;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social_list .fa-brands {
+  font-size: 18px;
+  margin: 0 auto;
+  color: #cccccc;
+}
 
 .description {
-  padding-bottom: 20px;
   color: #333;
   text-align: center;
   font-family: Raleway;
   font-size: 14px;
   font-weight: 500;
   line-height: 24px;
-  background-image: linear-gradient(to right, transparent 190px, #FC0 190px 200px, transparent 200px 205px, #FC0 205px 225px, transparent 225px 230px, #FC0 230px 240px, transparent 240px);
+  background-image: linear-gradient(to right, transparent 190px, #fc0 190px 200px, transparent 200px 205px, #fc0 205px 225px, transparent 225px 230px, #fc0 230px 240px, transparent 240px);
   background-repeat: no-repeat;
   background-size: 100% 5px;
   background-position: bottom;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .view_prof_btn button {
+  width: 120px;
+  height: 25px;
+  border: 1px solid #fc0;
+  margin: 0 auto;
+  padding: 5px 10px;
+  box-sizing: border-box;
   color: #666;
   text-align: center;
   font-family: Open Sans;
@@ -143,24 +188,4 @@ body {
   font-weight: 700;
   line-height: 14px;
   text-transform: uppercase;
-  border: 1px solid #FC0;
-  padding: 5px 10px;
-  margin-top: 25px;
-}
-
-.social_item {
-  min-width: 30px;
-  min-height: 30px;
-  border: 2px solid #CCCCCC;
-  border-radius: 50px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.fa-brands {
-  width: 15px;
-  margin: 0 auto;
-  color: #CCCCCC;
 }
