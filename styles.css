@@ -2,42 +2,48 @@
   font-family: "Raleway", sans-serif;
 }
 .container {
-  width: 1000px;
-  text-align: center;
+  max-width: 1440px;
   margin: 0 auto;
   width: 100%;
+  padding: 40px;
 }
 header {
-  background-color: #2e2e2e;
-  text-align: center;
-  border-bottom: 1px solid #000;
+  display: flex;
 }
 
 .title {
-  font-size: 50px;
+  font-family: Raleway;
   font-weight: 500;
-  padding: 20px;
-  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  color: #000000;
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
-
-.HM_list {
-  font-size: 24px;
-  font-weight: 500;
-  padding: 50px;
-  width: 500px;
-  margin: 0 auto;
-  margin-top: 20px;
+.all {
   display: flex;
+  justify-content: flex-start;
+  gap: 200px;
+}
+.HM_list {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
   flex-direction: column-reverse;
-  gap: 60px;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
 }
 
-.update {
-  color: green;
+.HM_item {
+  text-shadow: 0px 0px white, 2px 2px #68686845;
+  color: #333;
 }
-
-.HM_item:hover .new {
-  opacity: 1;
-  color: green;
-  font-weight: bolder;
+.HM_item:hover {
+  font-weight: 700;
+  transition: all 0.1s ease-in-out;
+}
+.new {
+  color: rgb(151, 107, 170);
 }
