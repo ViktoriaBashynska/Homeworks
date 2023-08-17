@@ -11,24 +11,36 @@
 
 .header {
   width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
   background-color: #fff;
   background-image: linear-gradient(to right, #efeef3 100%, transparent 0%);
   background-size: 100% 1px;
   background-position: bottom;
   background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .main {
   width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
   background-color: #fff;
+  margin-top: 180px;
 }
 
 .footer {
   width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
   background-color: #16133d;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .header_wrapper,
@@ -148,6 +160,12 @@
   font-size: 16px;
   font-weight: 600;
 }
+.serv_item_link:hover {
+  color: #20824b;
+}
+.serv_item_link:active {
+  transform: scale(1.1);
+}
 
 .megaphone_green,
 .building_green,
@@ -168,16 +186,18 @@
   border: 1px solid rgba(21, 101, 216, 0.1);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .megaphone,
 .building {
   width: 40px;
-  display: flex;
+  height: 36px;
 }
 
 .phone {
   width: 25px;
+  height: 36px;
 }
 
 .social {
@@ -207,6 +227,8 @@
 .social_item:hover .fb,
 .social_item:hover .instagram {
   --p1: #3db370;
+  transform: scale(1.2);
+  transition: all 0.1s ease-in-out;
 }
 
 .instagram,
