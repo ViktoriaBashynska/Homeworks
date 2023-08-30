@@ -31,3 +31,6 @@ button,
 a {
   cursor: pointer;
 }
+address {
+  font-style: normal;
+}
