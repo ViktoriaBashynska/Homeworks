@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="/css/dist/hamburgers.css" />
     <link href="./assets/css/fontawesome.css" rel="stylesheet" />
     <link href="./assets/css/brands.css" rel="stylesheet" />
     <link href="./assets/css/solid.css" rel="stylesheet" />
@@ -10,67 +11,107 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Red+Hat+Display:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="./css/styles.min.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manifest</title>
   </head>
-  <body>
+  <body class="menu_actve">
     <!-- Header -->
     <header>
       <div class="header_wrapper">
         <a href="" class="logo"><img src="./img/logo.svg" alt="" /></a>
         <nav class="nav">
-          <ul class="nav_list">
-            <li class="nav_item">
-              <a href="#" class="nav_item_link">home</a>
-            </li>
-            <li class="nav_item">
-              <a href="#" class="nav_item_link">about</a>
-            </li>
-            <li class="nav_item">
-              <a href="#" class="nav_item_link">works</a>
-            </li>
-            <li class="nav_item">
-              <a href="#" class="nav_item_link">blog</a>
-            </li>
-            <li class="nav_item">
-              <a href="#" class="nav_item_link">contact</a>
-            </li>
+          <ul class="nav_list active">
+            <a href="" class="logo_mobile"
+              ><img src="./img/logo.svg" alt=""
+            /></a>
+            <div class="nav_items">
+              <li class="nav_item">
+                <a href="#" class="nav_item_link"
+                  ><span class="nav_item_text">home</span></a
+                >
+              </li>
+              <li class="nav_item">
+                <a href="#" class="nav_item_link"
+                  ><span class="nav_item_text">about</span></a
+                >
+              </li>
+              <li class="nav_item">
+                <a href="#" class="nav_item_link"
+                  ><span class="nav_item_text">works</span></a
+                >
+              </li>
+              <li class="nav_item">
+                <a href="#" class="nav_item_link"
+                  ><span class="nav_item_text">blog</span></a
+                >
+              </li>
+              <li class="nav_item">
+                <a href="#" class="nav_item_link"
+                  ><span class="nav_item_text">contact</span></a
+                >
+              </li>
+            </div>
           </ul>
-          <form action="">
-            <input id="search_input" class="search_input" type="search" />
-            <label class="search_input_label" for="search_input">
-              <input id="search_input" class="search_input" type="search" />
-              <svg class="search_svg">
-                <use
-                  xlink:rel="nofollow,sponsored"
-                  href="./css/sprite.svg#search"
-                ></use>
-              </svg>
-            </label>
-          </form>
         </nav>
+        <form class="search" action="">
+          <label class="search_input_label" for="search_input">
+            <input id="search_input" class="search_input" type="search" />
+            <svg
+              class="search_svg"
+              id="search"
+              viewBox="0 0 18 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.8942 11.0715L17.6712 14.6313C17.8399 14.8079 17.8316 15.0783 17.6524 15.2454L16.9914 15.8684C16.9027 15.9526 16.7821 16 16.6562 16C16.5303 16 16.4096 15.9526 16.3209 15.8684L12.5439 12.3085C12.4394 12.21 12.3446 12.1028 12.2606 11.9881L11.5524 11.0982C10.3806 11.9801 8.92549 12.4602 7.42595 12.4598C4.33594 12.4699 1.65084 10.461 0.960303 7.62231C0.269767 4.78365 1.75809 1.87288 4.54414 0.613257C7.3302 -0.646363 10.6704 0.0813446 12.5873 2.36555C14.5042 4.64977 14.4862 7.88086 12.5439 10.1459L13.4881 10.76C13.6356 10.849 13.7718 10.9535 13.8942 11.0715ZM2.70508 6.23017C2.70508 8.68773 4.81889 10.68 7.42641 10.68C8.67859 10.68 9.87948 10.2112 10.7649 9.37666C11.6503 8.54216 12.1477 7.41034 12.1477 6.23017C12.1477 3.77262 10.0339 1.78037 7.42641 1.78037C4.81889 1.78037 2.70508 3.77262 2.70508 6.23017Z"
+                fill="black"
+              />
+            </svg>
+          </label>
+        </form>
+        <button
+          class="hamburger hamburger--squeeze"
+          onclick="toggleMenu()"
+          type="button"
+        >
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
       </div>
     </header>
     <!-- Main -->
     <main>
+      <!-- HERO section -->
+      <section class="hero">
+        <div class="section">
+          <h1 class="hero_title">
+            Manifest is a newborn theme. Clean, simple and fast.
+          </h1>
+        </div>
+      </section>
       <div class="main_wrapper">
-        <!-- HERO section -->
-        <section class="hero">
-          <div class="section">
-            <h1 class="hero_title">
-              Manifest is a newborn theme. Clean, simple and fast.
-            </h1>
-          </div>
-        </section>
         <!-- BLOG section -->
         <section class="blog section">
           <h2 class="blog_main_title">Blog</h2>
           <div class="blog_container blog_first">
             <div class="blog_pictures">
               <picture>
-                <img src="./img/jpg/blog_arrow_desk.jpg" alt="" />
+                <source
+                  srcset="./img/jpg/blog_arrow_mob.webp"
+                  media="(max-width:568px)"
+                />
+                <source
+                  srcset="./img/jpg/blog_arrow_tablet.webp"
+                  media="(max-width:968px)"
+                />
+                <img src="./img/jpg/blog_arrow_desk.webp" alt="" />
               </picture>
             </div>
             <div class="blog_content">
@@ -96,7 +137,11 @@
           <div class="blog_container blog_second">
             <div class="blog_pictures">
               <picture>
-                <img src="./img/jpg/blog_build_desk.jpg" alt="" />
+                <source
+                  srcset="./img/jpg/blog_build_desk.webp"
+                  media="(max-width:968px)"
+                />
+                <img src="./img/jpg/blog_build_desk.webp" alt="" />
               </picture>
             </div>
             <div class="blog_content">
@@ -130,7 +175,11 @@
             <li class="latest_posts_item">
               <div class="lat_posts_image">
                 <picture>
-                  <img src="./img/jpg/lat_posts_lamp_desk.jpg" alt="" />
+                  <source
+                    srcset="./img/jpg/lat_posts_lamp_tablet.webp"
+                    media="(max-width:968px)"
+                  />
+                  <img src="./img/jpg/lat_posts_lamp_desk.webp" alt="" />
                 </picture>
               </div>
               <div class="lat_posts_text">
@@ -150,7 +199,11 @@
             <li class="latest_posts_item">
               <div class="lat_posts_image">
                 <picture>
-                  <img src="./img/jpg/lat_posts_arrow_desk.jpg" alt="" />
+                  <source
+                    srcset="./img/jpg/lat_posts_arrow_tablet.webp"
+                    media="(max-width:968px)"
+                  />
+                  <img src="./img/jpg/lat_posts_arrow_desk.webp" alt="" />
                 </picture>
               </div>
               <div class="lat_posts_text">
@@ -172,7 +225,11 @@
             <li class="latest_posts_item">
               <div class="lat_posts_image">
                 <picture>
-                  <img src="./img/jpg/lat_posts_build_desk.jpg" alt="" />
+                  <source
+                    srcset="./img/jpg/lat_posts_build_tablet.webp"
+                    media="(max-width:968px)"
+                  />
+                  <img src="./img/jpg/lat_posts_build_desk.webp" alt="" />
                 </picture>
               </div>
               <div class="lat_posts_text">
@@ -201,7 +258,11 @@
             <div class="m_pop_item">
               <div class="m_pop_image">
                 <picture>
-                  <img src="./img/jpg/most_pop_lamp_desk.jpg" alt="" />
+                  <source
+                    srcset="./img/jpg/most_pop_lamp_tablet.webp"
+                    media="(max-width:968px)"
+                  />
+                  <img src="./img/jpg/most_pop_lamp_desk.webp" alt="" />
                 </picture>
               </div>
               <div class="m_pop_text">
@@ -225,7 +286,11 @@
             <div class="m_pop_item">
               <div class="m_pop_image">
                 <picture>
-                  <img src="./img/jpg/most_pop_arrow_desk.jpg" alt="" />
+                  <source
+                    srcset="./img/jpg/most_pop_arrow_tablet.webp"
+                    media="(max-width:968px)"
+                  />
+                  <img src="./img/jpg/most_pop_arrow_desk.webp" alt="" />
                 </picture>
               </div>
               <div class="m_pop_text">
@@ -279,11 +344,11 @@
     </main>
     <!-- Footer -->
     <footer>
-      <div class="footer_wrapper section">
+      <div class="footer_wrapper">
         <div class="footer_nav_wrapper">
           <div class="contacts">
             <address class="address_wrapper">
-              <h3 class="contacts_q">Need a project?</h3>
+              <p class="contacts_q">Need a project?</p>
               <a class="tel" href="tel:2395550108">(239) 555-0108</a>
               <a class="email" href="mailto:tanya.hill@example.com"
                 >tanya.hill@example.com</a
@@ -340,5 +405,11 @@
         </div>
       </div>
     </footer>
+    <script>
+      function toggleMenu() {
+        document.querySelector("body").classList.toggle("menu_active");
+        document.querySelector(".hamburger").classList.toggle("is-active");
+      }
+    </script>
   </body>
 </html>
