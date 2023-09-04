@@ -561,6 +561,7 @@ footer {
     .nav_list {
       transform: translate(0);
       z-index: 2;
+      opacity: 1;
     }
     .hamburger {
       z-index: 3;
@@ -583,6 +584,7 @@ footer {
     gap: 50px;
     z-index: 1;
     transform: translate(100%);
+    opacity: 0;
 
     .nav_items {
       display: flex;
