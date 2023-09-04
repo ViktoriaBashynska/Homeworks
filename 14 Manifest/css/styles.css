@@ -554,19 +554,12 @@ footer {
     margin-left: 40px;
     display: flex;
     align-self: center;
+    transition: all 0.3s ease-in-out;
   }
 
   .hamburger-box {
     width: 34px;
     height: 20px;
-  }
-
-  .hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-    width: 34px;
-    height: 2.5px;
-    border-radius: 0px;
   }
 
   .menu_active main {
@@ -586,7 +579,7 @@ footer {
 .menu_active .search {
     display: none;
   }
-  .menu_active .active {
+  .menu_active .nav_list {
     transform: translate(0);
     z-index: 2;
   }
