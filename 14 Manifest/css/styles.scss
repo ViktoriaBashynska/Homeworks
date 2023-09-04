@@ -762,6 +762,12 @@ footer {
     display: block;
     margin-left: 20px;
   }
+  .menu_active {
+    .hamburger {
+      position: absolute;
+      right: 10px;
+    }
+  }
 
   .hero {
     width: 100%;
