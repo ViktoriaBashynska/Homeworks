@@ -845,7 +845,7 @@ video {
   }
 
   .nav {
-    transform: translate(500%);
+    transform: translateX(-500%);
   }
 
   .hamburger {
@@ -897,7 +897,7 @@ video {
   }
   .menu_active .logo_mobile {
     display: block;
-    width: 40%;
+    width: 30vw;
   }
   .menu_active .logo_mobile .logo {
     width: 100%;
@@ -911,9 +911,8 @@ video {
     transform: translate(0);
     display: block;
     background-color: white;
-    box-shadow: -12px 0px 44px #262a3f;
     position: absolute;
-    width: 70vw;
+    width: 100vw;
     height: 100vh;
     right: 0;
     top: 0;
@@ -932,7 +931,7 @@ video {
     flex-direction: column;
     gap: 30px;
     align-items: center;
-    font-size: 30px;
+    font-size: 26px;
   }
   .menu_active .nav_item {
     width: 100%;
@@ -1087,29 +1086,58 @@ video {
   .hero_title {
     font-size: 38px;
   }
+
+  .menu_active .nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 568px) and (max-width: 768px) {
+  .hero_title {
+    font-size: 38px;
+  }
+
+  .menu_active .nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    font-size: 20px;
+  }
+  .menu_active .nav {
+    gap: 5px;
+  }
 }
 @media screen and (max-width: 568px) {
   body {
     font-size: 22px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .typic_sections {
     gap: 50px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .section {
     width: 94%;
   }
-
+}
+@media screen and (max-width: 568px) {
   .page_wrapper {
     background-size: 100% 500px, 100% 600px;
     background-position: right 270px, center top;
   }
-
+}
+@media screen and (max-width: 568px) {
   header {
     height: 50px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .hero_content_wrapper {
     max-width: 70%;
     padding-top: 40px;
@@ -1117,65 +1145,77 @@ video {
   .hero_content_wrapper .button {
     margin: 0 auto;
   }
-
+}
+@media screen and (max-width: 568px) {
   .info_numbers {
     flex-direction: column;
     margin-bottom: 20px;
     align-items: center;
     min-width: 100%;
   }
-
+}
+@media screen and (max-width: 568px) {
   .info_content {
     width: 100%;
     padding: 20px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .info_number {
     font-size: 30px;
     line-height: 50px;
     margin: 0 auto;
   }
-
+}
+@media screen and (max-width: 568px) {
   .info_numb_paragr {
     font-size: 18px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .dollar::before {
     color: #262a3f;
     font-size: 30px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .benefit_grid_wrapper {
     gap: 10px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .benefit_item_title {
     font-size: 26px;
     margin-bottom: 10px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .quote_content {
     display: flex;
     flex-direction: column;
   }
-
+}
+@media screen and (max-width: 568px) {
   .quote_svg {
     width: 70px;
     top: -33px;
     left: -54px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .quote_section {
     min-height: 380px;
     padding-left: 100px;
     padding-top: 80px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .quote_title {
     font-size: 20px;
     line-height: 30px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .video_link_youtube {
     width: 70px;
     height: 70px;
@@ -1186,12 +1226,14 @@ video {
     top: 9px;
     left: 12px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .video_title,
 .reviews_title {
     font-size: 28px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .video_wrapper {
     padding: 31px 45px 31px 30px;
   }
@@ -1207,7 +1249,8 @@ video {
     left: 0.9%;
     top: 51%;
   }
-
+}
+@media screen and (max-width: 568px) {
   .button_wrapper {
     padding: 0;
     border: none;
@@ -1215,29 +1258,35 @@ video {
   .button_wrapper:hover {
     border: none;
   }
-
+}
+@media screen and (max-width: 568px) {
   .review_item {
     max-width: 100%;
     min-height: 0px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .review_item_text {
     font-size: 18px;
     line-height: 22px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .bg1 {
     background-size: 100%, 130% 100%;
   }
-
+}
+@media screen and (max-width: 568px) {
   .bg2 {
     background-size: 100%, 145% 100%;
   }
-
+}
+@media screen and (max-width: 568px) {
   .bg3 {
     background-size: 100%, 200% 270%;
   }
-
+}
+@media screen and (max-width: 568px) {
   .contact_input_wrapper {
     min-width: none;
     display: flex;
@@ -1247,11 +1296,13 @@ video {
   .contact_input_wrapper .button {
     margin-top: 20px;
   }
-
+}
+@media screen and (max-width: 568px) {
   .contact_heading {
     max-width: 100%;
   }
-
+}
+@media screen and (max-width: 568px) {
   .contact_input_wrapper {
     min-width: 100%;
   }
