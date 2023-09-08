@@ -96,8 +96,8 @@ header {
 }
 
 .logo_wrapper {
+  width: 100%;
   max-width: 107px;
-  max-height: 32px;
   margin-right: 20px;
   transition: all 0.2s ease;
 }
@@ -713,6 +713,12 @@ video {
 
   .hero_content_wrapper {
     padding-top: 90px;
+    justify-items: center;
+  }
+
+  .logo_wrapper {
+    width: 100%;
+    max-width: 170px;
   }
 
   .info_number {
@@ -829,12 +835,17 @@ video {
     background-position: right 270px, center top;
   }
 
+  .logo_wrapper {
+    width: 100%;
+    max-width: 170px;
+  }
+
   header {
-    height: 60px;
+    height: 100px;
   }
 
   .nav {
-    transform: translateY(-300%);
+    transform: translate(500%);
   }
 
   .hamburger {
@@ -879,11 +890,7 @@ video {
     left: 0;
   }
   .menu_active .hamburger {
-    transition: all 1s ease-in-out;
-    position: absolute;
     z-index: 1;
-    right: 4%;
-    top: 2.8%;
   }
   .menu_active header {
     backdrop-filter: none;
@@ -901,12 +908,12 @@ video {
   }
   .menu_active .nav {
     transition: all 0.3s ease-in-out;
-    transform: translateY(0);
+    transform: translate(0);
     display: block;
     background-color: white;
     box-shadow: -12px 0px 44px #262a3f;
     position: absolute;
-    width: 100vw;
+    width: 70vw;
     height: 100vh;
     right: 0;
     top: 0;
@@ -914,8 +921,8 @@ video {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
-    gap: 100px;
+    padding-top: 1%;
+    gap: 40px;
   }
   .menu_active .nav_wrapper {
     width: 100%;
@@ -923,9 +930,9 @@ video {
   .menu_active .nav_list {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 30px;
     align-items: center;
-    font-size: 40px;
+    font-size: 30px;
   }
   .menu_active .nav_item {
     width: 100%;
