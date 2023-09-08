@@ -1,0 +1,155 @@
+// Colors
+
+$primaryColor: #262a3f;
+$primaryColorWhite: #fff;
+
+$accentColorGreen: #53f3cd;
+$accentColorOrange: #f1897b;
+
+$accentTextColorGreen: #85bbb1;
+$accentTextColorBlue: #689ff2;
+
+// Hover Colors
+
+$HoverColorOrange: #e54f3a;
+$HoverColorGreen: #02e0ab;
+
+// Fonts
+@mixin Lato300 {
+  font-family: "Lato";
+  font-weight: 300;
+}
+@mixin Lato400 {
+  font-family: "Lato";
+  font-weight: 400;
+}
+@mixin Lato700 {
+  font-family: "Lato";
+  font-weight: 700;
+}
+@mixin PlayfairRegular {
+  font-family: "Playfair Display";
+  font-weight: 400;
+}
+@mixin PlayfairItalic {
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin Paragraph {
+  max-width: 440px;
+  @include Lato300;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+// Accent Text
+@mixin PlayfairItalicGreen {
+  @include PlayfairItalic;
+  color: $accentTextColorGreen;
+}
+@mixin PlayfairItalicBlue {
+  @include PlayfairItalic;
+  color: $accentTextColorBlue;
+}
+
+// Buttons
+// Orange
+@mixin OrangeButton {
+  @include Lato700;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 1.6px;
+  color: $accentColorOrange;
+  text-transform: uppercase;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: $accentColorOrange;
+    height: 65%;
+    width: calc(100% - 3px);
+    opacity: 0.3;
+    top: 10px;
+    right: -7px;
+  }
+  &:hover {
+    color: $HoverColorOrange;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: $HoverColorOrange;
+      height: 65%;
+      width: calc(100% - 3px);
+      opacity: 0.3;
+      top: 10px;
+      right: -7px;
+    }
+  }
+}
+
+@mixin OrangeButtonBorder {
+  // padding: 33px 96px 37px 89px;
+  border: 1px solid #e4e4e4;
+  width: fit-content;
+  box-sizing: border-box;
+  &:hover {
+    border: 1px solid $HoverColorOrange;
+  }
+}
+
+// Green
+@mixin GreenButton {
+  @include Lato700;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 1.6px;
+  color: $accentColorGreen;
+  text-transform: uppercase;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: $accentColorGreen;
+    height: 65%;
+    width: calc(100% - 3px);
+    opacity: 0.3;
+    top: 10px;
+    right: -7px;
+  }
+  &:hover {
+    color: $HoverColorGreen;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      background: $HoverColorGreen;
+      height: 65%;
+      width: calc(100% - 3px);
+      opacity: 0.3;
+      top: 10px;
+      right: -7px;
+    }
+  }
+}
+@mixin GreenButtonBorder {
+  padding: 33px 96px 37px 89px;
+  border: 1px solid #515773;
+  width: fit-content;
+  &:hover {
+    border: 1px solid $HoverColorGreen;
+  }
+}
+
+// NAV  style
+@mixin NavStyles {
+  color: $primaryColor;
+  @include Lato400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 1.12px;
+}
