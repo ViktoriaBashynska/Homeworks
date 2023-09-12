@@ -1,0 +1,11 @@
+@import url(./reset.css);
+
+body {
+  padding: 50px;
+  font-family: Arial, sans-serif;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
