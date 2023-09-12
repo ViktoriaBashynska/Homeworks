@@ -1,6 +1,7 @@
+// Name
+
 function HelloName() {
 
-// Name
     const HelloName = prompt('What is your name?');
      if (HelloName === null) {
         console.log(`oh...wanna try again?`)
@@ -122,14 +123,14 @@ function Converter() {
 }
 
 // 0,1 & 0,2 
-function Sum() {
-    const first = 0.1;
-    const second = 0.2;
+// function Sum() {
+//     const first = 0.1;
+//     const second = 0.2;
 
-    const Sum = (Math.fround(first) + Math.fround(second));
+//     const Sum = (Math.fround(first) + Math.fround(second));
 
-    console.log(Sum)
-}
+//     console.log(Sum)
+// }
 
 // string 1 & number 2 
 function StrNum() {

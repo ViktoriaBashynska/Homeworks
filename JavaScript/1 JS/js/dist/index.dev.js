@@ -1,7 +1,7 @@
 "use strict";
 
+// Name
 function HelloName() {
-  // Name
   var HelloName = prompt('What is your name?');
 
   if (HelloName === null) {
@@ -117,14 +117,13 @@ function Converter() {
     console.log("Should we try again?");
   }
 } // 0,1 & 0,2 
-
-
-function Sum() {
-  var first = 0.1;
-  var second = 0.2;
-  var Sum = Math.fround(first) + Math.fround(second);
-  console.log(Sum);
-} // string 1 & number 2 
+// function Sum() {
+//     const first = 0.1;
+//     const second = 0.2;
+//     const Sum = (Math.fround(first) + Math.fround(second));
+//     console.log(Sum)
+// }
+// string 1 & number 2 
 
 
 function StrNum() {
