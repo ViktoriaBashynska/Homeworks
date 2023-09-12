@@ -94,7 +94,7 @@ function Speed() {
     } else {
       var _Speed = Kilometers / Hours;
 
-      console.log(_Speed);
+      console.log("".concat(_Speed, " km/h"));
     }
   } else {
     console.log("Should we try again?");
@@ -111,7 +111,7 @@ function Converter() {
     if (Amount <= 0) {
       console.log('These are hard times, I understand');
     } else {
-      console.log(Dollar.toFixed(2));
+      console.log("".concat(Dollar.toFixed(2), " \u20AC"));
     }
   } else {
     console.log("Should we try again?");

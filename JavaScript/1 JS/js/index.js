@@ -93,7 +93,7 @@ function Speed() {
             console.log('It does not work like that...')
         } else {
             const Speed = (Kilometers / Hours);
-            console.log(Speed)
+            console.log(`${Speed} km/h`)
         }
     }
     else {
@@ -113,7 +113,7 @@ function Converter() {
         if (Amount <= 0) {
             console.log('These are hard times, I understand')
         } else {
-            console.log(Dollar.toFixed(2))
+            console.log(`${Dollar.toFixed(2)} €`)
         }
     }
     else {
