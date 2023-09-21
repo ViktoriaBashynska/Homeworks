@@ -422,12 +422,12 @@ function time() {
     minute: 0,
     second: 0,
     normTime() {
-      if (this.second >= 60) {
+      if (this.second > 59) {
         const extraMin = Math.floor(this.second / 60);
         this.minute += extraMin;
         this.second %= 60;
       }
-      if (this.minute >= 60) {
+      if (this.minute > 59) {
         const extraHour = Math.floor(this.minute / 60);
         this.hour += extraHour;
         this.minute %= 60;
@@ -455,12 +455,12 @@ function time() {
       this.normTime();
     },
   };
-  time.hour = 11;
-  time.minute = 44;
-  time.second = 57;
+  time.hour = 23;
+  time.minute = 59;
+  time.second = 59;
   time.showTime();
-  time.plusHour(5);
-  time.plusMin(47);
-  time.plusSec(39);
+  time.plusHour(0);
+  time.plusMin(4);
+  time.plusSec(20);
   time.showTime();
 }
