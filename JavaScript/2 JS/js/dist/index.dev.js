@@ -207,8 +207,7 @@ function Discount() {
     var procent = 0;
 
     if (purchaseAmount < 200) {
-      alert("Your discount is 0%. Total: ".concat(purchaseAmount, " UAH"));
-      return false;
+      alert("Your discount is 0%. Total: ".concat(purchaseAmount, " UAH")); // return false;
     }
 
     if (purchaseAmount >= 200 && purchaseAmount <= 300) {
@@ -216,8 +215,7 @@ function Discount() {
 
       var _sum2 = purchaseAmount - purchaseAmount * procent / 100;
 
-      alert("Your discount is 3%. Total: ".concat(_sum2, " UAH"));
-      return false;
+      alert("Your discount is 3%. Total: ".concat(_sum2, " UAH")); // return false;
     }
 
     if (purchaseAmount > 300 && purchaseAmount <= 500) {
@@ -225,8 +223,7 @@ function Discount() {
 
       var _sum3 = purchaseAmount - purchaseAmount * procent / 100;
 
-      alert("Your discount is 5%. Total: ".concat(_sum3, " UAH"));
-      return false;
+      alert("Your discount is 5%. Total: ".concat(_sum3, " UAH")); // return false;
     }
 
     if (purchaseAmount > 500) {
@@ -234,8 +231,7 @@ function Discount() {
 
       var _sum4 = purchaseAmount - purchaseAmount * procent / 100;
 
-      alert("Your discount is 7%. Total: ".concat(_sum4, " UAH"));
-      return false;
+      alert("Your discount is 7%. Total: ".concat(_sum4, " UAH")); // return false;
     }
   } else {
     alert("enter numbers");
@@ -408,4 +404,122 @@ function getArea() {
   }
 
   alert("Area with sides ".concat(side, " = ").concat(sqArea));
+} // --------------------- Objects
+// Car
+
+
+function showCarInfo() {
+  var carProp = {
+    manufacturer: "Volvo",
+    model: "V60 Cross Country",
+    year: 2018,
+    avSpeed: 210,
+    fuelTankCapacity: 67,
+    avFuelConsump: 5.8,
+    drivers: ["Ivan Ivanov"],
+    getCarDet: function getCarDet() {
+      for (key in carProp) {
+        if (typeof carProp[key] !== "function") {
+          console.log("".concat(key, ": ").concat(carProp[key]));
+        }
+      }
+    },
+    getDrivers: function getDrivers() {
+      console.log("Current drivers list: ".concat(this.drivers));
+    },
+    addDriver: function addDriver(name) {
+      this.drivers.push(name);
+      console.log("//add driver");
+    },
+    deleteDriver: function deleteDriver(name) {
+      // delete this.drivers;
+      var delDriv = this.drivers.indexOf(name);
+      this.drivers.splice(delDriv, 1);
+      console.log("//delete driver");
+    },
+    checkDriver: function checkDriver(name) {
+      if (this.drivers.includes(name)) {
+        console.log("".concat(name, " is in the list"));
+      } else {
+        console.log("".concat(name, " is NOT in the list"));
+      }
+    },
+    getCount: function getCount(kilometers) {
+      var DrivingTime = kilometers / this.avSpeed;
+      var DrivingTimeFixed = (kilometers / this.avSpeed).toFixed(1);
+      var fuel = (kilometers / 100 * this.avFuelConsump).toFixed(1);
+      var stops = Math.floor(Math.floor(DrivingTime) / 4);
+      var totalTime = (+DrivingTimeFixed + +stops).toFixed(1);
+      console.log("You need ".concat(totalTime, " h. and ").concat(fuel, " liters of fuel to drive ").concat(kilometers, " km. You need to take ").concat(stops, " stops. Driving time w/o stops: ").concat(DrivingTimeFixed, " h."));
+    }
+  };
+  carProp.getCarDet(); // add
+
+  carProp.addDriver("Petro Petrov");
+  carProp.addDriver("Dmytro Dmitriev");
+  carProp.getDrivers(); // delete
+
+  carProp.deleteDriver("Petro Petrov");
+  carProp.getDrivers();
+  carProp.addDriver("Mark Marchenko");
+  carProp.getDrivers(); // check
+
+  carProp.checkDriver("Petro Petrov");
+  carProp.checkDriver("Mark Marchenko"); // count
+
+  carProp.getCount(900);
+} // 23:59:59 -> 00:00:19 -> 00:04:19 -> 04:04:19
+// Time
+
+
+function time() {
+  var time = {
+    hour: 0,
+    minute: 0,
+    second: 0,
+    normTime: function normTime() {
+      if (this.second >= 60) {
+        var extraMin = Math.floor(this.second / 60);
+        this.minute += extraMin;
+        this.second %= 60;
+      }
+
+      if (this.minute >= 60) {
+        var extraHour = Math.floor(this.minute / 60);
+        this.hour += extraHour;
+        this.minute %= 60;
+      }
+
+      if (this.hour >= 12) {
+        this.hour %= 12;
+      }
+    },
+    showTime: function showTime() {
+      var addZero = function addZero(n) {
+        return n < 10 ? "0".concat(n) : n;
+      };
+
+      console.log("".concat(addZero(this.hour), ":").concat(addZero(this.minute), ":").concat(addZero(this.second)));
+    },
+    plusHour: function plusHour(addHour) {
+      this.hour += addHour;
+      this.normTime();
+    },
+    plusMin: function plusMin(addMin) {
+      this.minute += addMin;
+      this.normTime();
+    },
+    plusSec: function plusSec(addSec) {
+      this.second += addSec;
+      this.normTime();
+    }
+  };
+  time.hour = 11;
+  time.minute = 44;
+  time.second = 57;
+  time.showTime();
+  time.plusHour(5);
+  time.plusMin(47);
+  time.plusSec(39);
+  time.showTime();
 }

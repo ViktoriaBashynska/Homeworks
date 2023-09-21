@@ -150,25 +150,25 @@ function Discount() {
     let procent = 0;
     if (purchaseAmount < 200) {
       alert(`Your discount is 0%. Total: ${purchaseAmount} UAH`);
-      return false;
+      // return false;
     }
     if (purchaseAmount >= 200 && purchaseAmount <= 300) {
       procent = 3;
       let sum = purchaseAmount - (purchaseAmount * procent) / 100;
       alert(`Your discount is 3%. Total: ${sum} UAH`);
-      return false;
+      // return false;
     }
     if (purchaseAmount > 300 && purchaseAmount <= 500) {
       procent = 5;
       let sum = purchaseAmount - (purchaseAmount * procent) / 100;
       alert(`Your discount is 5%. Total: ${sum} UAH`);
-      return false;
+      // return false;
     }
     if (purchaseAmount > 500) {
       procent = 7;
       let sum = purchaseAmount - (purchaseAmount * procent) / 100;
       alert(`Your discount is 7%. Total: ${sum} UAH`);
-      return false;
+      // return false;
     }
   } else {
     alert(`enter numbers`);
@@ -293,7 +293,6 @@ function numArguments() {
 }
 
 // Two numbers
-
 function twoNumbers() {
   const userNumbers = prompt(`Enter 2 numbers separated by a space`).split` `;
   const a = userNumbers[0];
@@ -313,6 +312,7 @@ function twoNumbers() {
     twoNumbers();
   }
 }
+
 //  n = 3
 // 1 * (n-1) * (n-2)
 
@@ -347,4 +347,120 @@ function getArea() {
     sqArea = side[0] * side[1];
   }
   alert(`Area with sides ${side} = ${sqArea}`);
+}
+
+// --------------------- Objects
+// Car
+function showCarInfo() {
+  const carProp = {
+    manufacturer: "Volvo",
+    model: "V60 Cross Country",
+    year: 2018,
+    avSpeed: 210,
+    fuelTankCapacity: 67,
+    avFuelConsump: 5.8,
+    drivers: ["Ivan Ivanov"],
+    getCarDet() {
+      for (key in carProp)
+        if (typeof carProp[key] !== "function") {
+          console.log(`${key}: ${carProp[key]}`);
+        }
+    },
+    getDrivers() {
+      console.log(`Current drivers list: ${this.drivers}`);
+    },
+    addDriver(name) {
+      this.drivers.push(name);
+      console.log(`//add driver`);
+    },
+    deleteDriver(name) {
+      // delete this.drivers;
+      const delDriv = this.drivers.indexOf(name);
+      this.drivers.splice(delDriv, 1);
+      console.log(`//delete driver`);
+    },
+    checkDriver(name) {
+      if (this.drivers.includes(name)) {
+        console.log(`${name} is in the list`);
+      } else {
+        console.log(`${name} is NOT in the list`);
+      }
+    },
+    getCount(kilometers) {
+      const DrivingTime = kilometers / this.avSpeed;
+      const DrivingTimeFixed = (kilometers / this.avSpeed).toFixed(1);
+      const fuel = ((kilometers / 100) * this.avFuelConsump).toFixed(1);
+      const stops = Math.floor(Math.floor(DrivingTime) / 4);
+      const totalTime = (+DrivingTimeFixed + +stops).toFixed(1);
+      console.log(
+        `You need ${totalTime} h. and ${fuel} liters of fuel to drive ${kilometers} km. You need to take ${stops} stops. Driving time w/o stops: ${DrivingTimeFixed} h.`
+      );
+    },
+  };
+
+  carProp.getCarDet();
+  // add
+  carProp.addDriver(`Petro Petrov`);
+  carProp.addDriver(`Dmytro Dmitriev`);
+  carProp.getDrivers();
+  // delete
+  carProp.deleteDriver(`Petro Petrov`);
+  carProp.getDrivers();
+  carProp.addDriver(`Mark Marchenko`);
+  carProp.getDrivers();
+  // check
+  carProp.checkDriver(`Petro Petrov`);
+  carProp.checkDriver(`Mark Marchenko`);
+  // count
+  carProp.getCount(900);
+}
+// 23:59:59 -> 00:00:19 -> 00:04:19 -> 04:04:19
+// Time
+function time() {
+  const time = {
+    hour: 0,
+    minute: 0,
+    second: 0,
+    normTime() {
+      if (this.second >= 60) {
+        const extraMin = Math.floor(this.second / 60);
+        this.minute += extraMin;
+        this.second %= 60;
+      }
+      if (this.minute >= 60) {
+        const extraHour = Math.floor(this.minute / 60);
+        this.hour += extraHour;
+        this.minute %= 60;
+      }
+      if (this.hour >= 12) {
+        this.hour %= 12;
+      }
+    },
+    showTime() {
+      const addZero = (n) => (n < 10 ? `0${n}` : n);
+      console.log(
+        `${addZero(this.hour)}:${addZero(this.minute)}:${addZero(this.second)}`
+      );
+    },
+    plusHour(addHour) {
+      this.hour += addHour;
+      this.normTime();
+    },
+    plusMin(addMin) {
+      this.minute += addMin;
+      this.normTime();
+    },
+    plusSec(addSec) {
+      this.second += addSec;
+      this.normTime();
+    },
+  };
+  time.hour = 11;
+  time.minute = 44;
+  time.second = 57;
+  time.showTime();
+  time.plusHour(5);
+  time.plusMin(47);
+  time.plusSec(39);
+  time.showTime();
 }
