@@ -1,0 +1,55 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 50px;
+  background: url(../image/bg.jpg);
+  background-attachment: fixed;
+  background-blend-mode: darken;
+  background-size: 100% 100%;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #000;
+  font-family: "Croissant One", cursive;
+}
+
+.wrapper {
+  max-width: 900px;
+  align-self: center;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(270deg, rgba(50, 50, 50, 0.5) 0%, rgba(255, 255, 255, 0.24) 24.1%, rgba(21, 21, 21, 0) 47.19%), rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(9px);
+}
+
+.btn_Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-content: center;
+  justify-content: center;
+}
+
+button {
+  min-width: 150px;
+}
+
+.btn {
+  background-color: black;
+  color: #fff;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+.btn:hover {
+  background-color: rgba(255, 251, 255, 0.627);
+  color: #000;
+  border: 1px solid #11ff00;
+  box-sizing: border-box;
+}
+.btn:hover:active {
+  background-color: rgba(17, 255, 0, 0.3);
+  border: 1px solid #11ff00;
+}

@@ -27,6 +27,10 @@ img {
   display: block;
   width: 100%;
 }
+button,
 a {
   cursor: pointer;
+}
+address {
+  font-style: normal;
 }
